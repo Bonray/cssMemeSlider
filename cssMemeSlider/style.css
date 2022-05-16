@@ -133,32 +133,40 @@ input {
 }
 
 .pagination__bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.pagination__bullet span {
   display: block;
-  height: 2rem;
-  width: 2rem;
+  height: 66.667%;
+  width: 66.667%;
   border-radius: 50%;
   border: 3px solid #fff;
   background-color: transparent;
-  cursor: pointer;
   text-decoration: none;
   transition: all .2s ease;
 }
 
-.pagination__bullet:hover {
+.pagination__bullet:hover span {
   border: 3px solid #999;
   background-color: #999;
 }
 
-.pagination__bullet:active {
+.pagination__bullet:active span {
   border: 3px solid #555;
   background-color: #555;
 }
 
-#slide1:checked ~ .slider-lower .pagination > .pagination__bullet--1,
-#slide2:checked ~ .slider-lower .pagination > .pagination__bullet--2,
-#slide3:checked ~ .slider-lower .pagination > .pagination__bullet--3,
-#slide4:checked ~ .slider-lower .pagination > .pagination__bullet--4,
-#slide5:checked ~ .slider-lower .pagination > .pagination__bullet--5 {
+#slide1:checked ~ .slider-lower .pagination > .pagination__bullet--1 span,
+#slide2:checked ~ .slider-lower .pagination > .pagination__bullet--2 span,
+#slide3:checked ~ .slider-lower .pagination > .pagination__bullet--3 span,
+#slide4:checked ~ .slider-lower .pagination > .pagination__bullet--4 span,
+#slide5:checked ~ .slider-lower .pagination > .pagination__bullet--5 span {
   background: #fff;
 }
 
@@ -191,8 +199,8 @@ input {
   }
 
   .pagination__bullet {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
   }
 }
 
