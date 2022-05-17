@@ -36,8 +36,8 @@ body {
 .container {
   margin: 0 auto;
   padding: 5px 0;
-  width: var(--container-width);
-  max-width: 100%;
+  max-width: var(--container-width);
+  width: 95%;
   text-align: center;
 }
 
@@ -55,19 +55,19 @@ input {
 }
 
 #slide2:checked ~ .slider-upper .slider-wrapper {
-  transform: translate(calc(var(--container-width) * -1));
+  transform: translate(calc(20% * -1));
 }
 
 #slide3:checked ~ .slider-upper .slider-wrapper {
-  transform: translateX(calc(var(--container-width) * -2));
+  transform: translateX(calc(20% * -2));
 }
 
 #slide4:checked ~ .slider-upper .slider-wrapper {
-  transform: translateX(calc(var(--container-width) * -3));
+  transform: translateX(calc(20% * -3));
 }
 
 #slide5:checked ~ .slider-upper .slider-wrapper {
-  transform: translateX(calc(var(--container-width) * -4));
+  transform: translateX(calc(20% * -4));
 }
 
 #slide1:checked ~ .slider-lower .desc .desc__wrapper {
@@ -91,16 +91,20 @@ input {
 }
 
 .slider-wrapper {
-  width: 400%;
+  width: 500%;
   display: flex;
   line-height: 0;
   transition: all .4s ease;
 }
 
+.slide {
+  width: calc(100% / 5);
+}
+
 .slide img {
   display: block;
   object-fit: cover;
-  width: 70rem;
+  width: 100%;
 }
 
 .slider-lower {
@@ -171,18 +175,8 @@ input {
 }
 
 @media screen and (max-width: 47.9375em) {
-  html {
-    font-size: 50%;
-  }
-}
-
-@media screen and (max-width: 38.75em) {
-  html {
-    font-size: 35%;
-  }
-
   :root {
-    --font-size: 3.2rem;
+    --font-size: 2rem;
   }
 
   .desc__text {
@@ -197,15 +191,10 @@ input {
   .desc {
     margin: 0 0 2rem;
   }
-
-  .pagination__bullet {
-    width: 3.2rem;
-    height: 3.2rem;
-  }
 }
 
-@media screen and (max-width: 28.75em) {
-  html {
-    font-size: 27.5%;
+@media screen and (max-width: 38.75em) {
+  :root {
+    --font-size: 1.4rem;
   }
 }
